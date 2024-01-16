@@ -1,294 +1,316 @@
 html {
-    scroll-behavior: smooth;
-    background-color: black;
+  scroll-behavior: smooth;
+  background-color: black;
 }
-body{
-    margin: 0;
-    padding: 0;
-    font-family: "future";
-    --custom-bg: url(bg.png);
-}
-
-@font-face{
-    font-family: 'future';
-    src: url(fonts.ttf);
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "future";
+  --custom-bg: url(bg.png);
 }
 
-#trigger1{
-    position: absolute;
-    top: 100vh;
-}
-h1{
-    font-size: 50px;
-    margin: 0 0 30px 0;
-    color: white;
-}
-p{
-    font-family: 'futura', Arial, Helvetica, sans-serif;
-    font-size: 21px;
-}
-.navbar{
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    height: 65px;
-    overflow: hidden;
-    list-style-type: none;
-    width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.464), rgba(110, 153, 189, 0));
-}
-.navbar li{
-    display: inline;
-    padding: 10px;
-}
-#selected{
-    text-decoration: none;
-    color:white
-}
-.navbar li a{
-    text-decoration: none;
-    color: #469ffff8;
-    border-bottom: 2px solid white;
-    border-width: 0px;
-    transition: 0.1s ease-in;
-
-}
-.navbar a:hover{
-    color: white;
-    border-width: initial;
-}
-.welcome-section{
-    height: 100vh;
-    width: 100%;
-    position: relative;
+@font-face {
+  font-family: "future";
+  src: url(fonts.ttf);
 }
 
-.fixed::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--custom-bg);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: .9;
+#trigger1 {
+  position: absolute;
+  top: 100vh;
 }
-.scroll::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--custom-bg);
-    background-attachment: scroll;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: .9;
+h1 {
+  font-size: 50px;
+  margin: 0 0 30px 0;
+  color: white;
 }
-.title-section{
-    position: relative;
-    z-index: 1;
-    text-align: right;
-    top: 30%;
-    margin-right: 10%;
+p {
+  font-family: "futura", Arial, Helvetica, sans-serif;
+  font-size: 21px;
 }
-.clickable{
-    text-decoration: none;
-    color: white;
-    border: 2px solid #469fff;
-    text-transform: uppercase;
-    padding: 10px 40px;
-    transition: 0.4s linear;
-    margin: 10px;
-    max-height: 20px;
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 65px;
+  overflow: hidden;
+  list-style-type: none;
+  width: 100%;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.464),
+    rgba(110, 153, 189, 0)
+  );
 }
-.clickable:hover{
-    color: rgb(0, 0, 0);
-    background: #469fff;
+.navbar li {
+  display: inline;
+  padding: 10px;
 }
-.info-section{
-    background-image: linear-gradient(rgb(31, 31, 31), rgb(0, 0, 0));
-    position: relative;
-    height: 100%;
-    z-index: 1;
-    text-align: center;
-    color: white;
-    overflow: hidden;
+#selected {
+  text-decoration: none;
+  color: white;
 }
-.info-section h1{
-    margin-top: 30px;
+.navbar li a {
+  text-decoration: none;
+  color: #469ffff8;
+  border-bottom: 0px solid white;
+  transition: 0.1s ease-in;
 }
-.items{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
+.navbar a:hover {
+  color: white;
 }
-.card{
-    position: relative;
-    text-align: center;
-    width: 310px;
-    margin: 40px;
-    margin-top: 30px;
-    line-height: 30px;
-    border: #469fff 2px solid;
-    border-radius: 6px;
-    padding: 10px;
-    transition: .5s;
+.welcome-section {
+  height: 100vh;
+  width: 100%;
+  position: relative;
 }
-.card:hover{
-    transform: scale(1.05);
+
+.fixed::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--custom-bg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
 }
-.card ul{
-    text-align: left;
+.scroll::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--custom-bg);
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
 }
-.card li{
-    list-style-type: none;
-    font-family: 'futura', Arial, Helvetica, sans-serif;
+.title-section {
+  position: relative;
+  z-index: 1;
+  text-align: right;
+  top: 30%;
+  margin-right: 10%;
 }
-.presentations{
-    text-align: center;
-    margin-top: 100px;
-    margin-left: 30px;
-    color: white
+.clickable {
+  text-decoration: none;
+  color: white;
+  border: 2px solid #469fff;
+  text-transform: uppercase;
+  padding: 10px 40px;
+  transition: 0.4s linear;
+  margin: 10px;
+  max-height: 20px;
 }
-.presentations li{
-    margin: 40px;
+.clickable:hover {
+  color: rgb(0, 0, 0);
+  background: #469fff;
 }
-.items-space{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.info-section {
+  background-image: linear-gradient(rgb(31, 31, 31), rgb(0, 0, 0));
+  position: relative;
+  height: 100%;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  overflow: hidden;
 }
-.description{
-    text-align: left;
-    max-width: 60%;
+.info-section h1 {
+  margin-top: 30px;
 }
-.icon-image{
-    margin: 30px;
-    width: 40%;
-    height: auto;
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+.card {
+  position: relative;
+  text-align: center;
+  width: 310px;
+  margin: 40px;
+  margin-top: 30px;
+  line-height: 30px;
+  border: #469fff 2px solid;
+  border-radius: 6px;
+  padding: 10px;
+  transition: 0.5s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card ul {
+  text-align: left;
+}
+.card li {
+  list-style-type: none;
+  font-family: "futura", Arial, Helvetica, sans-serif;
+}
+.presentations {
+  text-align: center;
+  margin-top: 100px;
+  margin-left: 30px;
+  color: white;
+}
+.presentations li {
+  margin: 40px;
+}
+.items-space {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.description {
+  text-align: left;
+  max-width: 60%;
+}
+.icon-image {
+  margin: 30px;
+  width: 40%;
+  height: auto;
 }
 .custom-shape-divider-top-1683659809 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
 }
 
 .custom-shape-divider-top-1683659809 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 216px;
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 216px;
 }
 
 .custom-shape-divider-top-1683659809 .shape-fill {
-    fill: #000000;
+  fill: #000000;
 }
-.footer{
-    padding-top: 200px;
-    position: relative;
-    overflow: hidden;
-    color: white;
-    text-align: center;
-    background-color: #3079eeed;
-
+.projects {
+  position: relative;
+  padding-top: 200px;
+  background-color: white;
+  text-align: center;
 }
-.contact form { 
-    max-width:420px; margin:50px auto; 
+.projects h1 {
+  color: black;
+}
+.extra {
+  width: 40vw;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+}
+.grad {
+  position: relative;
+  height: 20px;
+  background-image: linear-gradient(rgb(255, 255, 255), #3079eeed);
+}
+.footer {
+  padding-top: 100px;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+  background-color: #3079eeed;
+}
+.contact form {
+  max-width: 420px;
+  margin: 50px auto;
 }
 
 .feedback-input {
-  color:white;
-  font-family: 'futura', Arial, Helvetica, sans-serif;
-  font-weight:500;
+  color: white;
+  font-family: "futura", Arial, Helvetica, sans-serif;
+  font-weight: 500;
   font-size: 18px;
   border-radius: 5px;
   line-height: 22px;
   background-color: transparent;
-  border:2px solid #000000;
+  border: 2px solid #000000;
   transition: all 0.3s;
   padding: 13px;
   margin-bottom: 15px;
-  width:100%;
+  width: 100%;
   box-sizing: border-box;
-  outline:0;
+  outline: 0;
 }
 
-.feedback-input:focus { 
-    border:2px solid #1787ff; 
+.feedback-input:focus {
+  border: 2px solid #1787ff;
 }
-::placeholder{
-    color: rgb(204, 204, 204);
+::placeholder {
+  color: rgb(204, 204, 204);
 }
 
 .contact textarea {
   height: 150px;
   line-height: 150%;
-  resize:vertical;
+  resize: vertical;
 }
 
 [type="submit"] {
   font-family: "future";
   width: 100%;
-  background:#000000;
-  border-radius:5px;
-  border:0;
-  cursor:pointer;
-  color:white;
-  font-size:24px;
-  padding-top:10px;
-  padding-bottom:10px;
+  background: #000000;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   transition: all 0.3s;
-  margin-top:-4px;
-  font-weight:700;
+  margin-top: -4px;
+  font-weight: 700;
 }
-[type="submit"]:hover { background:#1787ff; }
+[type="submit"]:hover {
+  background: #1787ff;
+}
 
-.link{
-    margin-top: 10px;
-    width: 100%;
-    max-width: 300px;
-    margin-bottom: 10px;
+.link {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 10px;
 }
-.link img{
-    margin-top: 20px;
-    width: 200px;
-    height: 200px;
+.link img {
+  margin-top: 20px;
+  width: 200px;
+  height: 200px;
 }
-.link a{
-    font-size: 25px;
-    text-decoration: none;
-    color: white;
-    font-family: 'futura', Arial, Helvetica, sans-serif;
-
+.link a {
+  font-size: 25px;
+  text-decoration: none;
+  color: white;
+  font-family: "futura", Arial, Helvetica, sans-serif;
 }
-.link a:visited{
-    text-decoration: none;
-    color: rgb(255, 255, 255);
+.link a:visited {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
 }
-@media only screen and (max-width : 600px) {
-    h1{
-        font-size: 35px;
-    }
-    .title-section a{
-        display: flex;
-    }
-    .title-section{
-        text-align: center;
-        margin-right: 0;
-    }
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 35px;
+  }
+  .title-section a {
+    display: flex;
+  }
+  .title-section {
+    text-align: center;
+    margin-right: 0;
+  }
 }
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  {  
-    .fixed::after{
-      background-attachment: scroll;
-    }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .fixed::after {
+    background-attachment: scroll;
+  }
 }
